@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'FELIXTI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('FELIXTI'), url('../css/fonts/FELIXTI.woff') format('woff');
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ching Yuan - connection</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="./css/lightbox.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./font/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="connection">
+        <div class="item-0-4">
+            <a href="./connection.html">
+                <div class="animate__animated animate__slideInDown animate__slow number-0-1">04</div>
+                <div class="animate__animated animate__slideInLeft animate__slow word-0-1">connection
+                </div>
+            </a>
+        </div>
+        <div class="animate__animated animate__fadeInTopRight animate__slow animate__delay-1s item-4-0"></div>
+        <div class="animate__animated animate__fadeInTopLeft animate__slow animate__delay-2s item-4-1"></div>
+        <div class="animate__animated animate__fadeInBottomRight animate__slow animate__delay-3s item-4-2">
+            <form id="form">
+                <div class="box-4-0">
+                    <div class="word-4-0">send me a email</div>
+                </div>
+                <div class="box-4-1">
+                    <label for="name" class="word-4-1">name</label><br>
+                    <input name="name" id="name" type="text" placeholder="名稱" class="text-4-0" required>
+                </div>
+                <div class="box-4-1">
+                    <label for="phone" class="word-4-1">phone</label><br>
+                    <input name="phone" id="phone" type="text" placeholder="電話" class="text-4-0" required>
+                </div>
+                <div class="box-4-1">
+                    <label for="email" class="word-4-1">email</label><br>
+                    <input name="email" id="email" type="email" placeholder="信箱" class="text-4-0" required>
+                </div>
+                <div class="box-4-1">
+                    <label for="message" class="word-4-1">message</label><br>
+                    <textarea name="message" id="message" type="text" placeholder="訊息" class="text-4-1"
+                        required></textarea>
+                </div>
+                <div class="box-4-2">
+                    <input name="button" id="button" type="submit" value="send email" class="button-4-0">
+                    <input type="reset" value="reset" class="button-4-0">
+                </div>
+            </form>
+        </div>
+        <div class="item-0-5">
+            <div class="box-0-2">
+                <div class="animate__animated animate__fadeInTopRight animate__slow">
+                    <a class="box-0-3" href="./illustration.html"><i class="fa-solid fa-circle-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="box-0-2">
+                <div class="animate__animated animate__fadeInBottomRight animate__slow">
+                    <a class="box-0-3" href="./index.html"><i class="fa-brands fa-fort-awesome-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item-gold-4">
+            <div class="animate__animated animate__fadeInRight animate__slow">
+                <img src="./images/04_connection/gold_04.webp">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.6.1.min.js"></script>
+<script src="./js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script>
+    emailjs.init('jM5DyT-pN9FFu3bpW')
+    const btn = document.getElementById('button');
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+            btn.value = 'Sending';
+            const serviceID = 'Ching Yuan';
+            const templateID = 'Ching Yuan';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Successfully Sent');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+
+</html>

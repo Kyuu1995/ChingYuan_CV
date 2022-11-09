@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ching Yuan - about</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="./css/lightbox.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/masonry-docs.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./font/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="about">
+        <div class="item-0-4">
+            <a href="./about.html">
+                <div class="animate__animated animate__slideInDown animate__slow number-0-1">02</div>
+                <div class="animate__animated animate__slideInLeft animate__slow word-0-1">about</div>
+            </a>
+        </div>
+        <div class="animate__animated animate__rollIn animate__slow animate__delay-1s item-2-0">
+            <div class="animate__animated animate__fadeIn animate__slow animate__delay-2s box-2-0" id="photo">
+                <a href="./images/02_about/photo/0.webp" data-lightbox="photo" data-title="彭靖媛 1996.10.31">
+                    <img src="./images/02_about/photo/0.webp">
+                </a>
+                <a href="./images/02_about/photo/1.webp" data-lightbox="photo" data-title="彭靖媛 1996.10.31"
+                    style="display: none;">
+                    <img src="./images/02_about/photo/1.webp">
+                </a>
+            </div>
+            <div class="animate__animated animate__fadeIn animate__slow animate__delay-2s box-2-1">
+                <div class="word-2-0">彭靖媛</div>
+                <div class="word-2-1">Peng Ching Yuan</div>
+                <div class="word-2-1">1996/10/31</div>
+                <div class="word-2-0">專長 / 平面設計、電腦插畫、水彩、素描</div>
+                <div class="word-2-0">愛好 / 科幻電影、動畫、美食、獨立音樂</div>
+                <div class="word-2-0">樂於嘗試一切新事物</div>
+            </div>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__slow animate__delay-1s item-2-1">
+            <div class="box-2-2">
+                <div class="number-2-0">2022</div>
+                <div class="word-2-2">鑫邑誠地產行銷</div>
+                <div class="word-2-2">企劃設計</div>
+                <div class="line-2-0"></div>
+                <div class="number-2-0">2021</div>
+                <div class="word-2-2">發現公關整合行銷</div>
+                <div class="word-2-2">企劃設計</div>
+                <div class="line-2-0"></div>
+                <div class="number-2-0">2020</div>
+                <div class="word-2-2">卜上實業</div>
+                <div class="word-2-2">美編</div>
+                <div class="line-2-0"></div>
+                <div class="number-2-0">2019</div>
+                <div class="word-2-2">大葉大學</div>
+                <div class="word-2-2">視覺傳達設計系</div>
+                <div class="line-2-0"></div>
+                <div class="number-2-0">2015</div>
+                <div class="word-2-2">桃園育達高中</div>
+                <div class="word-2-2">廣告技術科</div>
+            </div>
+        </div>
+        <div class="item-0-5">
+            <div class="box-0-2">
+                <div class="animate__animated animate__fadeInTopRight animate__slow">
+                    <a class="box-0-3" href="./works.html"><i class="fa-solid fa-circle-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="box-0-2">
+                <div class="animate__animated animate__fadeInRight animate__slow">
+                    <a class="box-0-3" href="./index.html"><i class="fa-brands fa-fort-awesome-alt"></i></a>
+                </div>
+            </div>
+            <div class="box-0-2">
+                <div class="animate__animated animate__fadeInBottomRight animate__slow">
+                    <a class="box-0-3" href="./illustration.html"><i class="fa-solid fa-circle-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item-gold-2">
+            <div class="animate__animated animate__fadeInRight animate__slow">
+                <img src="./images/02_about/gold_02.webp">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery-3.6.1.min.js"></script>
+<script src="./js/lightbox.min.js"></script>
+<script src="./js/masonry-docs.min.js"></script>
+<script>
+    $('.item-2-0').imagesLoaded()
+        .always(function (instance) {
+            console.log('all images loaded')
+        })
+        .done(function (instance) {
+            console.log('all images successfully loaded')
+        })
+        .fail(function () {
+            console.log('all images loaded, at least one is broken')
+        })
+        .progress(function (instance, image) {
+            var result = image.isLoaded ? 'loaded' : 'broken'
+            console.log('image is ' + result + ' for ' + image.img.src)
+        })
+</script>
+
+</html>

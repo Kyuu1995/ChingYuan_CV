@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ching Yuan</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="./css/lightbox.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./font/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="loading-item">
+        <div class="animate__animated animate__fadeIn animate__slow">
+            <div class="loading-box">welcome</div>
+            <div class="loading-word">loading</div>
+            <div class="loading-img">
+                <img src="./images/body-loading.gif">
+            </div>
+        </div>
+    </div>
+    <div class="index">
+        <div class="animate__animated animate__fadeIn animate__slow animate__delay-3s">
+            <div class="home">
+                <div class="item-0-0">
+                    <div class="animate__animated animate__zoomIn animate__slow animate__delay-4s">
+                        <div class="animate__animated animate__rotateIn animate__slow animate__delay-4s">
+                            <img src="./images/logo.webp">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-0-1">
+                    <div class="title-0-0">
+                        <div class="animate__animated animate__zoomIn animate__slow animate__delay-4s">ching yuan</div>
+                    </div>
+                    <div class="title-0-1">
+                        <div class="animate__animated animate__zoomIn animate__slow animate__delay-4s">作 品 集</div>
+                    </div>
+                </div>
+                <div class="item-0-2">
+                    <div class="box-0-1">
+                        <a href="./works.html">
+                            <div class="animate__animated animate__fadeInDown animate__slow animate__delay-4s">
+                                <div class="number-0-0">01</div>
+                            </div>
+                            <div class="animate__animated animate__fadeInLeft animate__slow animate__delay-4s">
+                                <div class="word-0-0">works</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-0-1">
+                        <a href="./about.html">
+                            <div class="animate__animated animate__fadeInDown animate__slow animate__delay-4s">
+                                <div class="number-0-0">02</div>
+                            </div>
+                            <div class="animate__animated animate__fadeInLeft animate__slow animate__delay-4s">
+                                <div class="word-0-0">about</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-0-1">
+                        <a href="./illustration.html">
+                            <div class="animate__animated animate__fadeInDown animate__slow animate__delay-4s">
+                                <div class="number-0-0">03</div>
+                            </div>
+                            <div class="animate__animated animate__fadeInLeft animate__slow animate__delay-4s">
+                                <div class="word-0-0">illustration</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-0-1">
+                        <a href="./connection.html">
+                            <div class="animate__animated animate__fadeInDown animate__slow animate__delay-4s">
+                                <div class="number-0-0">04</div>
+                            </div>
+                            <div class="animate__animated animate__fadeInLeft animate__slow animate__delay-4s">
+                                <div class="word-0-0">connection</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-0-3">
+                    <div class="footer-0-0">
+                        <div class="animate__animated animate__fadeIn animate__slow animate__delay-4s">
+                            Just an ordinary designer From TAIWAN with love &copy; 2022 ching yuan . inc
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.6.1.min.js"></script>
+<script src="./js/lightbox.min.js"></script>
+<script>
+    $(window).on('load', function () {
+        $('.loading-item').delay(1000).fadeOut(1000)
+    })
+    $(function () {
+        var $el = $('.home')
+        var mousePos = {}
+        var boxCenter = {
+            x: $el.outerWidth() / 2,
+            y: $el.outerHeight() / 2
+        }
+        var bgPos = 50
+        $el.mousemove(function (e) {
+            var x = e.screenX === undefined ? e.layerX : e.screenX
+            var y = e.screenY === undefined ? e.layerY : e.screenY
+            x -= boxCenter.x
+            y -= boxCenter.y
+            var moveX = bgPos + (x / 32)
+            var moveY = bgPos + (y / 32)
+            $el
+                .css('background-size', "cover")
+                .css('background-position', moveX + '% ' + moveY + '%')
+        })
+            .mouseleave(function () {
+                $el
+                    .css('background-size', "cover")
+                    .css('background-position', '50% 50%')
+            })
+    })
+</script>
+
+</html>
